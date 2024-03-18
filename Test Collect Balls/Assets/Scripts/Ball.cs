@@ -5,9 +5,6 @@ using UnityEngine.Events;
 
 public class Ball : MonoBehaviour
 {
-    [HideInInspector]
-    public UnityEvent ballDestroyed = new UnityEvent();
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +19,6 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ballDestroyed?.Invoke();
         Destroy(gameObject);
     }
 }

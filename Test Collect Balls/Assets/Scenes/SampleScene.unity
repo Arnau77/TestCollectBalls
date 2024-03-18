@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 2811093337446607312, guid: 136cce7427fdc124bb432db0ed70f40a, type: 3}
+  positionLimitForSpawning: 7
+  maxTimeToSpawn: 5
 --- !u!4 &400615724
 Transform:
   m_ObjectHideFlags: 0
