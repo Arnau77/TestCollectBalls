@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    private GameManager gameManager = null;
+
+    [SerializeField]
     private float playerSpeed = 0;
 
     [SerializeField]
@@ -34,5 +37,13 @@ public class Player : MonoBehaviour
         velocity.x += context.ReadValue<Vector2>().x * playerSpeed;
 
         playerRigidbody2d.velocity = velocity;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Ball")
+        {
+            gameManager.GetPoint();
+        }
     }
 }
