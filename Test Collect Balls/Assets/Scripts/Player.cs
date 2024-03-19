@@ -5,37 +5,33 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [Tooltip("The game manager")]
     [SerializeField]
     private GameManager gameManager = null;
 
+    [Tooltip("The speed the player will move")]
     [SerializeField]
     private float playerSpeed = 0;
 
+    [Tooltip("The player's rigidbody")]
     [SerializeField]
     private Rigidbody2D playerRigidbody2d = null;
 
+    [Tooltip("The player's animator")]
     [SerializeField]
     private Animator animator = null;
 
+    [Tooltip("The player's sprite renderer")]
     [SerializeField]
     private SpriteRenderer spriteRenderer = null;
 
+    [Tooltip("The player's audio source")]
     [SerializeField]
     private AudioSource audioSource = null;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
+    /// <summary>
+    /// This function is called when the player uses (or stops using) the move buttons
+    /// </summary>
     public void Move(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -45,9 +41,11 @@ public class Player : MonoBehaviour
 
         Vector3 velocity = Vector3.zero;
         velocity.x += context.ReadValue<Vector2>().x * playerSpeed;
+
         if (velocity.x != 0)
         {
             animator.SetBool("isMoving", true);
+
             if (velocity.x < 0)
             {
                 spriteRenderer.flipX = true;
