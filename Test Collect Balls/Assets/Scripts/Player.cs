@@ -14,6 +14,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Rigidbody2D playerRigidbody2d = null;
 
+    [SerializeField]
+    private Animator animator = null;
+
+    [SerializeField]
+    private SpriteRenderer spriteRenderer = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +41,22 @@ public class Player : MonoBehaviour
 
         Vector3 velocity = Vector3.zero;
         velocity.x += context.ReadValue<Vector2>().x * playerSpeed;
+        if (velocity.x != 0)
+        {
+            animator.SetBool("isMoving", true);
+            if (velocity.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else
+            {
+                spriteRenderer.flipX = false;
+            }
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
 
         playerRigidbody2d.velocity = velocity;
     }
