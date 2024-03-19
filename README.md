@@ -1,6 +1,6 @@
 # Technical Test
 ## Controls (Keyboard):
-- WA: Move
+- AD: Move
 - Enter: Start to play
 
 ## Free assets used for this project:
