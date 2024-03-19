@@ -33,7 +33,7 @@ public class BallSpawner : MonoBehaviour
 
     private IEnumerator SpawnBall(float timeToSpawn)
     {
-        yield return new WaitForSecondsRealtime(timeToSpawn);
+        yield return new WaitForSeconds(timeToSpawn);
         GameObject newBall = Instantiate(ballPrefab, transform);
         Vector3 newPosition = newBall.transform.position;
         newPosition.x = Random.Range(minPositionLimitForSpawning, maxPositionLimitForSpawning);
