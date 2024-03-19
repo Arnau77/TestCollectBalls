@@ -237,7 +237,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 2811093337446607312, guid: 136cce7427fdc124bb432db0ed70f40a, type: 3}
-  positionLimitForSpawning: 7
+  maxPositionLimitForSpawning: 7
+  minPositionLimitForSpawning: -7
+  minTimeToSpawn: 0
   maxTimeToSpawn: 5
 --- !u!4 &400615724
 Transform:
@@ -531,7 +533,6 @@ GameObject:
   - component: {fileID: 1060007961}
   - component: {fileID: 1060007960}
   - component: {fileID: 1060007963}
-  - component: {fileID: 1060007962}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -716,23 +717,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!111 &1060007962
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060007955}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: fa928e30b7958674cbde47f2dbd6737a, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: fa928e30b7958674cbde47f2dbd6737a, type: 2}
-  - {fileID: 7400000, guid: 5176e61a6e239904ebaf7b27a83d4c00, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &1060007963
 Animator:
   serializedVersion: 5

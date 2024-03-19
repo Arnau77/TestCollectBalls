@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2811093337446607316}
   - component: {fileID: 2811093337446607315}
   - component: {fileID: 2811093337446607317}
-  - component: {fileID: 7886779677507998253}
   - component: {fileID: 2358721563588884499}
   m_Layer: 0
   m_Name: Ball
@@ -138,22 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb67d6134a97a64a8ff04ad637efd9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!111 &7886779677507998253
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811093337446607312}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 6811707fa9042b748bd9a2f1a62be98f, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 6811707fa9042b748bd9a2f1a62be98f, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &2358721563588884499
 Animator:
   serializedVersion: 5
