@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private SpriteRenderer spriteRenderer = null;
 
+    [SerializeField]
+    private AudioSource audioSource = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +68,7 @@ public class Player : MonoBehaviour
     {
         if (collision.tag == "Ball")
         {
+            audioSource.Play();
             gameManager.GetPoint();
         }
     }
