@@ -44,6 +44,6 @@ public class BallSpawner : MonoBehaviour
         newPosition.x = Random.Range(minPositionLimitForSpawning, maxPositionLimitForSpawning);
         newBall.transform.position = newPosition;
 
-        StartCoroutine(SpawnBall(Random.Range(0, maxTimeToSpawn)));
+        StartCoroutine(SpawnBall(Random.Range(minTimeToSpawn, maxTimeToSpawn)));
     }
 }

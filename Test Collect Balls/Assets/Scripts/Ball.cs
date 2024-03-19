@@ -7,6 +7,9 @@ public class Ball : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.tag == "Ground" || collision.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }
